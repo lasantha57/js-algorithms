@@ -69,3 +69,12 @@ String.prototype.reverse = function () {
 }
 
 console.log('abcdddds'.reverse());
+
+
+function reverseV5(str) {
+    return str.split('').reduce((reversed, char) => {
+        return char + reversed;
+    }, '');
+}
+
+console.log(reverseV5('abcdddds'));

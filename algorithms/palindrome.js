@@ -56,11 +56,11 @@ function palindromeV4(str) {
 console.log(palindromeV4('carasdf'));
 console.log(palindromeV4('carac'));
 
-function palidromeV4(str) {
+function palidromeV5(str) {
     return str.split('').every((char, i) => {
-        return char === (str.length - 1 - i);
+        return char === str[str.length - 1 - i];
     });
 }
 
-console.log(palindromeV4('carasdf'));
-console.log(palindromeV4('carac'));
+console.log(palidromeV5('carasdf'));
+console.log(palidromeV5('carac'));
