@@ -26,3 +26,15 @@ function createCharacterMap(str) {
 
 console.log(anagram('abcde ftrf', 'acdbe trff'));
 console.log(anagram('abcde ftrf23', 'acdbe trff'));
+
+
+function anagramV2(str1, str2) {
+    return sortString(str1) === sortString(str2)
+}
+
+function sortString(str) {
+    return str.split('').sort().join('');
+}
+
+console.log(anagramV2('abcde ftrf', 'acdbe trff'));
+console.log(anagramV2('abcde ftrf23', 'acdbe trff'));
