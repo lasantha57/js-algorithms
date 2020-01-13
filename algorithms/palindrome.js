@@ -55,3 +55,12 @@ function palindromeV4(str) {
 
 console.log(palindromeV4('carasdf'));
 console.log(palindromeV4('carac'));
+
+function palidromeV4(str) {
+    return str.split('').every((char, i) => {
+        return char === (str.length - 1 - i);
+    });
+}
+
+console.log(palindromeV4('carasdf'));
+console.log(palindromeV4('carac'));
