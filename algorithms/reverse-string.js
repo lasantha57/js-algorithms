@@ -54,7 +54,7 @@ console.log(reverseV3('abcdddds'));
  */
 
 function reverseV4(str) {
-    return str.split('').reverse().join('');
+    return [...str].reverse().join('');
 }
 
 console.log(reverseV4('abcdddds'));
