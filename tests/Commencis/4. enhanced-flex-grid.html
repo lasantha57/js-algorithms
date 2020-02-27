@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+
+        .grid-item {
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+
+        .flex-container>div {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+            width: 25%;
+        }
+
+        @media (max-width: 720px) {
+            .grid-container {
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .grid-container {
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1
+            <div class="flex-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </div>
+        <div class="grid-item">2
+            <div class="flex-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </div>
+        <div class="grid-item">3
+            <div class="flex-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </div>
+        <div class="grid-item">4
+            <div class="flex-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
