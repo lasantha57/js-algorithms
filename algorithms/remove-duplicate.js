@@ -8,17 +8,23 @@
  */
 
 function removeDuplicate(arr) {
-    var returnArray = [];
-    var exists = {};
+    const uniques = [];
+    const duplicates = [];
 
     for (var i = 0; i < arr.length; i++) {
-        if (!exists[arr[i]]) {
+        if (arr.lastIndexOf()) {
             exists[arr[i]] = true;
-            returnArray.push(arr[i]);
+            uniques.push(arr[i]);
+        } else {
+            duplicates.push(arr[i])
         }
     }
 
-    return returnArray;
+    uniques.sort();
+    duplicates.sort();
+
+    return [...uniques, ...duplicates];
+
 }
 
-console.log(removeDuplicate([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
+console.log(removeDuplicate([5, 3, 1, 2, 2, 4]));
