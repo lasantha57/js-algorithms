@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div class="button-container">
+
+    </div>
+
+    <script>
+        ((doc) => {
+
+            const buttonContainer = doc.getElementsByClassName('button-container')[0];
+
+            buttonContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+                alert(event.target.name);
+            });
+
+            function createButton(index) {
+                return `<input type="button" name="${index}" value="${index}"/>`;
+            }
+
+            function renderButtons(count) {
+                let buttonsHtml = ``;
+                for (let i = 1; i <= count; i++) {
+                    buttonsHtml = `${buttonsHtml}${createButton(i)}`;
+                }
+                buttonContainer.innerHTML = buttonsHtml;
+            }
+
+            renderButtons(20);
+
+        })(document);
+    </script>
+
+</body>
+
+</html>
